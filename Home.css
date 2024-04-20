@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color: white;
+   /* animation: RefreshAnim 0.5s; */
+}
+
+/*@keyframes RefreshAnim {
+    from{
+        opacity: 0;
+        transform: translateY(0.1%)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+*/
+body{
+    background-color: black;
+}
+
+header {
+    background: #000;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+header h2 {
+    font-size: 5dvh;
+    padding-left: 5dvh;
+    padding-top: 2dvh;
+}
+
+header nav {
+    position: absolute;
+    right: 5dvh;
+    padding-top: 2.5dvh;
+}
+header nav a {
+    outline: none;
+    text-decoration: none;
+}
+
+header nav button{
+    background: white;
+    border: 0.3dvh solid black ;
+    border-radius: 2dvh;
+    height: 5dvh;
+    width: 14dvh;
+    margin-left:2dvh ;
+    margin-right: 2dvh;
+    transition: 0.3s;
+}
+
+header nav button a {
+    color: black;
+    font-size: 2dvh;
+    font-weight: 1000;
+    transition: 0.3s;
+}
+
+header nav button:hover  {
+    background: black;
+    border: 0.3dvh solid white;
+}
+
+header nav button:hover a {
+    color: white;
+}
+
+
+/*learn how to make the contact link be down when you click wen it*/
+
+header nav .nav-link {
+    margin:0 2dvh ;
+    font-size: 2dvh;
+    font-weight: 600;
+    position: relative;
+}
+
+/*and figire out this*/
+
+header nav .nav-link::after {
+    position: absolute;
+    content: '';
+    background: white;
+    width: 100%;
+    height: 0.4dvh;
+    transform-origin: center;
+    bottom: -0.8dvh;
+    left: 0.2dvh;
+    outline: none;
+    border-radius: 5dvh;
+    transform: scaleX(0);
+    transition: transform 0.5s; 
+}
+
+header nav .nav-link:hover::after {
+    transform-origin: center; 
+    transform: scaleX(1); 
+}
+header .min-nav {
+    display: none;
+    position: absolute;
+    top: 1.4dvh;
+    right: 6dvh;
+    font-size: 4dvh;
+    padding: 1.4dvh 1.8dvh .3dvh 1.8dvh;
+    border-radius: 10dvh;
+}
+@media only screen and (max-height:0) {
+    header {
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width:77dvh) {
+    nav {
+        display: none;
+    }
+    header .min-nav{
+        display:inline;
+    }
+    header .min-nav:hover{
+        border: 0.3dvh  solid white;
+        
+    }
+}
+
+/*.fix-contact {
+    border: 0.3dvh solid white;
+    padding: 1.4dvh 1.8dvh .3dvh 1.8dvh;
+    border-radius:5dvh ;
+    font-size:3dvh ;
+    position: fixed;
+    bottom: 3dvh;
+    right: 3dvh;
+
+}
+.fix-contact .con-hov {
+    display: none;    
+}
+.fix-contact:hover .con-hov  {
+    display:block;
+    padding: 0.4dvh 0 1.2dvh 0;
+    font-size:3dvh ;
+}
+
+
+.fix-contact:hover .con-outhov {
+    display: none;
+} 
+
+HTML Code : "<div class="fix-contact">
+        <ion-icon class="con-outhov" name="chatbubble-ellipses-outline"></ion-icon>
+        <ion-icon class="con-hov" name="chatbubble-ellipses"></ion-icon>
+    </div>"
+*/
+
+.intro {
+    background: url(Image-Video/WhatsApp\ Image\ 2024-04-18\ at\ 12.07.14\ PM.jpeg) repeat-x left ;
+    background-size: 100dvh;
+    min-height: 80dvh;
+    box-sizing: border-box;
+    margin-top: 10dvh;
+    position: relative;
+    padding: 2dvh;
+    text-align: center;
+    width: 100%;
+    font-size: 2dvh;
+    font-weight: 600;
+    
+}
+
+.intro h1 {
+    word-wrap: break-all;
+    padding-top: 2dvh;
+    font-size: 10dvh;
+    transition: .5s;
+}
+
+.intro h1 span {
+    color: rgb(255, 115, 0);
+    font-size: 11dvh;
+    transition: .5s;
+}
+
+.intro h1:hover {
+    color: rgb(255, 115, 0);
+}
+
+.intro h1:hover span {
+    color: blueviolet;
+}
+
+.intro-Me{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.intro-Me h2{
+    font-size: 5dvh;
+    transition: .5s;
+}
+.intro-Me h2:hover {
+    color: red;
+}
+
+.intro-Me .btn input {
+    width: 18dvh;
+    height: 6dvh;
+    background: transparent;
+    border: 0.3dvh solid white;
+    border-radius: 2dvh;
+    margin: 2dvh;
+    font-size: 2dvh;
+    font-weight: 700;
+    color: white;
+    transition: 0.3s;
+}
+.intro-Me .btn input:hover  {
+    border: 0.3dvh solid red;
+    color: red;
+}
+
+.what-i-do {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #202020;
+}
+.what-i-do h2 {
+    padding-top: 2dvh;
+    font-size: 5dvh;
+    transition: 0.5s;
+
+}
+
+.what-i-do h2:hover {
+    color: red;
+
+}
+/*you need to complet the web site and fix the header (all) and the img of the logo and learn JS (well)*/
+/*make when you myt the mouse in the eyes of me the hole imege be colored in 1 s*/
+.what-i-do .sec {
+    display: flex;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+.what-i-do .sec .contant {
+    text-align: center;
+}
+
+.what-i-do .all-sec {
+    padding: 6dvh 0;
+    display: flex;
+}
+
+.what-i-do .icon {
+    position: relative;
+    align-items: center;
+    font-size: 5dvh;
+    padding: 5dvh;
+    margin: 2dvh;
+    border: solid 0.3dvh white;
+    border-radius: 10dvh;
+    height: 2dvh;
+    width: 2dvh;
+}
+.what-i-do .icon ion-icon {
+    position: absolute;
+    top: 2.5dvh;
+    right: 2.5dvh;
+}
+
+.what-i-do .sec h3 {
+    font-size: 2.5dvh;
+    padding-bottom: 1dvh;
+    word-wrap: break-word;
+}
+
+.what-i-do .sec p {
+    font-size: 1.4dvh;
+    word-wrap: break-word;
+}
+.what-i-do .sec p  a{
+    color: aqua;
+    text-decoration: none;
+}
+.what-i-do .sec p  a:hover{
+    text-decoration: underline;
+}
+
+
+.about {
+    width: 100%;
+    padding: 2dvh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    font-size: 2dvh;
+    
+}
+
+.about .content {
+    width: 50%;
+    padding: 2dvh 0;
+    margin: 5dvh;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.about .content .titles {
+    padding-bottom: 3dvh;
+    font-size: 3dvh;
+}
+
+.about .content .titles h3 {
+    font-size: 2dvh;
+    color: red;
+}
+
+
+.about .analy {
+    width: 50%;
+    padding: 2dvh;
+    word-wrap: break-word;
+}
+
+
+.progect {
+    position: relative;
+    width: 100%;
+    font-size: 2dvh;
+    text-align: center;
+    padding: 2dvh 0;
+}
+
+.progect .big-title {
+    padding: 2dvh 0;
+    font-size: 3.5dvh;
+}
+.progect .big-title h2 {
+    transition: 0.5s;
+    word-break: break-all;
+}
+.progect .big-title:hover h2 {
+    color: red;
+}
+
+.prog-contant {
+    display: flex;
+}
+#forsa {
+    
+    background: url(Image-Video/Forsa\ bg.jpg) center;
+    background-size: 80%;
+
+}
+#forsa p ,#forsa h3{
+    color: white;
+
+}/*make it the be when you hover all the prog section 
+the head ahd the discrition be coloured with nice color in 0.5s*/
+
+
+
+.progect .PL {
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1dvh 4dvh;
+}
+
+.progect .prog {
+    margin: 1dvh;
+    border: white 0.5dvh solid;
+    border-radius: 3dvh;
+    width: 100%;
+    max-width: 70dvh;
+    min-width: 53.21dvh;
+    min-height: 40dvh ;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+
+.progect .prog:hover {
+    margin:0 1dvh 1dvh 0 ;
+    box-shadow: white; /*fixed and complite the shadow and the 
+    weidth*/
+}
+.progect .prog .title h3 {
+    word-break: break-all;
+    transition: 0.3s;
+}
+
+.progect .prog:hover .title h3{
+    color: red;
+}
+
+.progect .prog .title {
+    padding: 2dvh 0;
+    font-size: 2.5dvh;
+}
+
+footer {
+    width: 100%;
+    min-height: 30dvh;
+    background-color: #202020;
+}
+
+footer .title h2 {
+    word-break: break-all;
+    text-align: center;
+    font-size: 5dvh;
+    transition: .5s;
+}
+
+footer .title:hover h2 {
+    color: red;
+}
+footer .contact {
+    display: flex;
+    width: 100%;
+    padding: 2dvh;
+    box-sizing: border-box;
+
+}
+
+footer .contact .mycontact  {
+    width: 50%;
+    padding-left: 3dvh;
+    padding-top: 3dvh;
+    
+}
+
+footer .contact .form {
+    width: 50%;
+}
+
+footer .contact .mycontact .con-ele {
+    display: flex;
+}
+
+
+footer .contact .mycontact .con-ele .icon {
+    margin: 1dvh;
+    padding: 2dvh 2dvh 1.2dvh 2dvh;
+    font-size: 2dvh;
+    border: #000 solid 0.3dvh;
+    border-radius: 5dvh;
+    
+}
+
+footer .contact .mycontact .con-ele .icon ion-icon {
+    color: rgb(119, 63, 63);
+}
+
+footer .contact .mycontact .con-ele:hover ion-icon{
+    color: red;
+    
+}
+
+footer .contact .mycontact .con-ele:hover a {
+    text-decoration: underline;
+}
+
+footer .contact .mycontact .con-ele a {
+    word-wrap: break-word;
+    word-break: break-all;
+    padding-top: 2.5dvh;
+    text-decoration: none;
+    font-size: 2dvh;
+}
+footer .contact .form {
+    text-align: center;
+}
+
+footer .contact .form input {
+    outline: none;
+    font-size: 2dvh;
+    background: transparent;
+    width: 80%;
+    height: 6dvh;
+    padding: 2dvh;
+    margin: 0.5dvh 0;
+    border: 0.1dvh solid ;
+    border-radius: 0.5dvh;
+}
+
+footer .contact .form input::placeholder{
+    font-size:1.5dvh ;
+}
+#form-btn {
+    cursor: pointer;
+    font-size: 2dvh;
+    height: 7dvh;
+    transition: 0.3s;
+}
+#form-btn:hover {
+    color: red;
+    border: white solid 0.1;
+}
+
+footer .contact .form form #msg {
+    height: 10dvh;
+}
+footer .theking {
+    font-size: 2dvh;
+    text-align: center;
+    
+}
+footer .theking a{
+    text-decoration: none;
+    color: rgb(57, 98, 160);
+}
+footer .theking a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:128dvh) {
+    .what-i-do {
+        width: 100%;
+        min-height: 65dvh;
+    }
+    .what-i-do .all-sec {
+        display:block;
+    }
+    .what-i-do .sec {
+        width: 100%;
+    }
+    .what-i-do .sec .contant {
+        width: 88%;
+    }
+    .about {
+        display: block;
+    }
+    .about .analy {
+        width: 100%;
+        }
+    .about .content {
+        margin: 5dvh 0;
+        width: 100%;
+    }
+    .prog-contant {
+        display: block;
+    }
+    .progect .prog {
+        min-width: 0;
+    }
+    footer .contact {
+        display: block;
+        
+    }
+    footer .contact .form{
+        width: 100%;
+    }
+    footer .contact .mycontact {
+        width: 100%;
+    }
+}
